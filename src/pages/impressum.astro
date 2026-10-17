@@ -1,0 +1,28 @@
+---
+import Base from "../layouts/Base.astro";
+import blocks from "../impressum.json";
+
+const body = blocks.slice(1);
+---
+
+<Base title="Impressum — Luc Maibaum" path="/impressum" description="Impressum und Haftungsausschluss für lucmaibaum.com">
+  <section class="shell page-head">
+    <p class="eyebrow">Rechtliches</p>
+    <h1 class="display">Impressum</h1>
+  </section>
+
+  <section class="shell legal">
+    {body.map((block) => <p>{block}</p>)}
+  </section>
+</Base>
+
+<style>
+  .legal { max-width: 68ch; }
+  .legal p {
+    margin: 0 0 1.5rem;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: rgba(244, 243, 241, 0.72);
+    white-space: pre-line;
+  }
+</style>

@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+
+const { title, description = "Luc Maibaum is a Berlin-based Director of Photography working across commercial, music, fashion and narrative film.", path = "" } = Astro.props;
+const nav = [
+  { href: "/work", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
+];
+const isCurrent = (href) => path === href || (href !== "/" && path.startsWith(href));
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="/">Luc Maibaum</a>
+      <nav class="nav">
+        {nav.map((item) => (
+          <a href={item.href} aria-current={isCurrent(item.href) ? "page" : undefined}>{item.label}</a>
+        ))}
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell row">
+        <div>
+          <div class="eyebrow">Director of Photography — Berlin</div>
+          <a href="mailto:maibaumfilm@gmail.com" style="font-size:1.125rem">maibaumfilm@gmail.com</a>
+        </div>
+        <nav>
+          <a href="https://www.instagram.com/lucmaibaum/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://vimeo.com/lucmaibaum" target="_blank" rel="noopener">Vimeo</a>
+          <a href="/impressum">Impressum</a>
+        </nav>
+      </div>
+      <div class="shell" style="margin-top:2.5rem">
+        <p class="fine">© {new Date().getFullYear()} Luc Maibaum. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

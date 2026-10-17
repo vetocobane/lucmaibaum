@@ -1,0 +1,293 @@
+[
+  {
+    "category": "Commercial",
+    "video": {
+      "provider": "vimeo",
+      "id": "1097514853"
+    },
+    "title": "Bill x Katjes",
+    "slug": "bill-x-katjes",
+    "director": "Viktoria Renner & Marvin Jockschat",
+    "producer": "OZMOZE",
+    "stillFiles": [
+      "/stills/bill-x-katjes-01.jpg",
+      "/stills/bill-x-katjes-02.jpg",
+      "/stills/bill-x-katjes-03.jpg",
+      "/stills/bill-x-katjes-04.jpg",
+      "/stills/bill-x-katjes-05.jpg",
+      "/stills/bill-x-katjes-06.jpg"
+    ]
+  },
+  {
+    "category": "Commercial",
+    "video": {
+      "provider": "vimeo",
+      "id": "876306184"
+    },
+    "title": "TINDER",
+    "slug": "tinder",
+    "director": "Valentina Schütz",
+    "producer": "DOJO",
+    "stillFiles": [
+      "/stills/tinder-01.jpg",
+      "/stills/tinder-02.jpg",
+      "/stills/tinder-03.jpg",
+      "/stills/tinder-04.jpg",
+      "/stills/tinder-05.jpg",
+      "/stills/tinder-06.jpg",
+      "/stills/tinder-07.jpg",
+      "/stills/tinder-08.jpg"
+    ]
+  },
+  {
+    "category": "Commercial",
+    "video": {
+      "provider": "vimeo",
+      "id": "935802874"
+    },
+    "title": "COLORS x Levi's",
+    "slug": "colors-x-levi-s",
+    "director": "Megan Courtis",
+    "producer": "COLORSxSTUDIOS",
+    "stillFiles": [
+      "/stills/colors-x-levi-s-01.jpg",
+      "/stills/colors-x-levi-s-02.jpg",
+      "/stills/colors-x-levi-s-03.jpg",
+      "/stills/colors-x-levi-s-04.jpg",
+      "/stills/colors-x-levi-s-05.jpg",
+      "/stills/colors-x-levi-s-06.jpg",
+      "/stills/colors-x-levi-s-07.jpg",
+      "/stills/colors-x-levi-s-08.jpg"
+    ]
+  },
+  {
+    "category": "Commercial",
+    "video": {
+      "provider": "vimeo",
+      "id": "962171692"
+    },
+    "title": "SPACIES x CRO",
+    "slug": "spacies-x-cro",
+    "director": "Felix Glasmeyer",
+    "producer": "Dan Gizzie",
+    "stillFiles": [
+      "/stills/spacies-x-cro-01.jpg",
+      "/stills/spacies-x-cro-02.jpg",
+      "/stills/spacies-x-cro-03.jpg",
+      "/stills/spacies-x-cro-04.jpg",
+      "/stills/spacies-x-cro-05.jpg",
+      "/stills/spacies-x-cro-06.jpg",
+      "/stills/spacies-x-cro-07.jpg",
+      "/stills/spacies-x-cro-08.jpg"
+    ]
+  },
+  {
+    "category": "Commercial",
+    "video": {
+      "provider": "vimeo",
+      "id": "687845964"
+    },
+    "title": "LEHMANN",
+    "slug": "lehmann",
+    "director": "Bella Christmann",
+    "producer": "David Löhlein & Vasiliki Gridoridou",
+    "stillFiles": [
+      "/stills/lehmann-01.jpg",
+      "/stills/lehmann-02.jpg",
+      "/stills/lehmann-03.jpg",
+      "/stills/lehmann-04.jpg",
+      "/stills/lehmann-05.jpg",
+      "/stills/lehmann-06.jpg",
+      "/stills/lehmann-07.jpg",
+      "/stills/lehmann-08.jpg",
+      "/stills/lehmann-09.jpg",
+      "/stills/lehmann-10.jpg"
+    ]
+  },
+  {
+    "category": "Music",
+    "video": {
+      "provider": "youtube",
+      "id": "eG3rULr-rcw"
+    },
+    "title": "BILLIE EILISH - A COLORS CLOSE UP",
+    "slug": "billie-eilish-a-colors-close-up",
+    "director": "Megan Courtis",
+    "producer": "COLORS x Studios",
+    "stillFiles": [
+      "/stills/billie-eilish-a-colors-close-up-01.jpeg",
+      "/stills/billie-eilish-a-colors-close-up-02.jpeg",
+      "/stills/billie-eilish-a-colors-close-up-03.jpeg",
+      "/stills/billie-eilish-a-colors-close-up-04.jpeg",
+      "/stills/billie-eilish-a-colors-close-up-05.jpeg",
+      "/stills/billie-eilish-a-colors-close-up-06.jpeg",
+      "/stills/billie-eilish-a-colors-close-up-07.jpeg",
+      "/stills/billie-eilish-a-colors-close-up-08.jpeg"
+    ]
+  },
+  {
+    "category": "Music",
+    "video": {
+      "provider": "youtube",
+      "id": "h-siysbw0BA"
+    },
+    "title": "MONSTERA BLACK - EAT YOUR SOUL",
+    "slug": "monstera-black-eat-your-soul",
+    "director": "Kai Chase-Meares & Luc Maibaum",
+    "producer": "Luc Maibaum & Kai Chase-Meares",
+    "stillFiles": [
+      "/stills/monstera-black-eat-your-soul-01.jpg",
+      "/stills/monstera-black-eat-your-soul-02.jpg",
+      "/stills/monstera-black-eat-your-soul-03.jpg",
+      "/stills/monstera-black-eat-your-soul-04.jpg",
+      "/stills/monstera-black-eat-your-soul-05.jpg",
+      "/stills/monstera-black-eat-your-soul-06.jpg"
+    ]
+  },
+  {
+    "category": "Music",
+    "video": {
+      "provider": "youtube",
+      "id": "TIViEOXhqjo"
+    },
+    "title": "CCOSMO - PFEIL",
+    "slug": "ccosmo-pfeil",
+    "director": "Dan Trautwein",
+    "producer": "Dan Trautwein",
+    "stillFiles": [
+      "/stills/ccosmo-pfeil-01.jpg",
+      "/stills/ccosmo-pfeil-02.jpg",
+      "/stills/ccosmo-pfeil-03.jpg",
+      "/stills/ccosmo-pfeil-04.jpg",
+      "/stills/ccosmo-pfeil-05.jpg",
+      "/stills/ccosmo-pfeil-06.jpg",
+      "/stills/ccosmo-pfeil-07.jpg",
+      "/stills/ccosmo-pfeil-08.jpg",
+      "/stills/ccosmo-pfeil-09.jpg",
+      "/stills/ccosmo-pfeil-10.jpg"
+    ]
+  },
+  {
+    "category": "Music",
+    "video": {
+      "provider": "youtube",
+      "id": "IOgNMlG1TzA"
+    },
+    "title": "LEC WINTER 2024 - EVERYTHING WE GOT",
+    "slug": "lec-winter-2024-everything-we-got",
+    "director": "Patrick Halliday",
+    "producer": "Silkrock",
+    "stillFiles": [
+      "/stills/lec-winter-2024-everything-we-got-01.jpg",
+      "/stills/lec-winter-2024-everything-we-got-02.jpg",
+      "/stills/lec-winter-2024-everything-we-got-03.jpg",
+      "/stills/lec-winter-2024-everything-we-got-04.jpg",
+      "/stills/lec-winter-2024-everything-we-got-05.jpg",
+      "/stills/lec-winter-2024-everything-we-got-06.jpg"
+    ]
+  },
+  {
+    "category": "Fashion",
+    "video": {
+      "provider": "vimeo",
+      "id": "1075947437"
+    },
+    "title": "LE MILE - THE TRIGGER",
+    "slug": "le-mile-the-trigger",
+    "director": "Christopher Puttins",
+    "producer": "Ellie Crespo",
+    "stillFiles": [
+      "/stills/le-mile-the-trigger-01.jpg",
+      "/stills/le-mile-the-trigger-02.jpg",
+      "/stills/le-mile-the-trigger-03.jpg",
+      "/stills/le-mile-the-trigger-04.jpg",
+      "/stills/le-mile-the-trigger-05.jpg",
+      "/stills/le-mile-the-trigger-06.jpg",
+      "/stills/le-mile-the-trigger-07.jpg",
+      "/stills/le-mile-the-trigger-08.jpg"
+    ]
+  },
+  {
+    "category": "Fashion",
+    "video": {
+      "provider": "vimeo",
+      "id": "927728141"
+    },
+    "title": "NUMÉRO NL EDITORIAL",
+    "slug": "numero-nl-editorial",
+    "director": "Christopher Puttins",
+    "producer": "Christopher Puttins",
+    "stillFiles": [
+      "/stills/numero-nl-editorial-01.jpg",
+      "/stills/numero-nl-editorial-02.jpg",
+      "/stills/numero-nl-editorial-03.jpg",
+      "/stills/numero-nl-editorial-04.jpg",
+      "/stills/numero-nl-editorial-05.jpg",
+      "/stills/numero-nl-editorial-06.jpg",
+      "/stills/numero-nl-editorial-07.jpg",
+      "/stills/numero-nl-editorial-08.jpg",
+      "/stills/numero-nl-editorial-09.jpg",
+      "/stills/numero-nl-editorial-10.jpg"
+    ]
+  },
+  {
+    "category": "Fashion",
+    "video": {
+      "provider": "vimeo",
+      "id": "1015567648"
+    },
+    "title": "GLAMOUR",
+    "slug": "glamour",
+    "director": "Christopher Puttins",
+    "producer": "Christopher Puttins",
+    "stillFiles": [
+      "/stills/glamour-01.jpg",
+      "/stills/glamour-02.jpg",
+      "/stills/glamour-03.jpg",
+      "/stills/glamour-04.jpg",
+      "/stills/glamour-05.jpg",
+      "/stills/glamour-06.jpg"
+    ]
+  },
+  {
+    "category": "Narrative",
+    "video": {
+      "provider": "vimeo",
+      "id": "842109379"
+    },
+    "title": "THE ONE AFTER ME",
+    "slug": "the-one-after-me",
+    "director": "Felix Glasmeyer",
+    "producer": "COLORS x Studios",
+    "stillFiles": [
+      "/stills/the-one-after-me-01.jpg",
+      "/stills/the-one-after-me-02.jpeg",
+      "/stills/the-one-after-me-03.jpg",
+      "/stills/the-one-after-me-04.jpeg",
+      "/stills/the-one-after-me-05.jpeg",
+      "/stills/the-one-after-me-06.jpeg",
+      "/stills/the-one-after-me-07.jpg",
+      "/stills/the-one-after-me-08.jpg",
+      "/stills/the-one-after-me-09.jpg"
+    ]
+  },
+  {
+    "category": "Narrative",
+    "video": {
+      "provider": "vimeo",
+      "id": "750653391"
+    },
+    "title": "REQUIEM POUR PIANOS",
+    "slug": "requiem-pour-pianos",
+    "director": "Pavlé Savic & Raphaël Botton",
+    "producer": "P92 & ODYSSÉE & METROLAB PRODUCTIONS",
+    "stillFiles": [
+      "/stills/requiem-pour-pianos-01.jpg",
+      "/stills/requiem-pour-pianos-02.jpg",
+      "/stills/requiem-pour-pianos-03.jpg",
+      "/stills/requiem-pour-pianos-04.jpg",
+      "/stills/requiem-pour-pianos-05.jpg",
+      "/stills/requiem-pour-pianos-06.jpg"
+    ]
+  }
+]

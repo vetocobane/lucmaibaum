@@ -1,0 +1,117 @@
+---
+import Base from "../layouts/Base.astro";
+import projects from "../projects.json";
+
+// PLACEHOLDER COPY — replace with Luc's own bio.
+const bio = [
+  "Luc Maibaum is a Director of Photography based in Berlin, shooting commercials, music videos, fashion film and narrative work.",
+  "His approach starts with the story rather than the setup: finding the frame that carries the idea, then lighting it so it feels inevitable. The result is imagery that moves between the graphic and the tactile, at home in a controlled studio build and on a location where the light is whatever the day gives you.",
+  "He works with agencies, labels, magazines and independent directors across Europe, and is available for commissions worldwide.",
+];
+
+const clients = ["Katjes", "Tinder", "Levi's", "COLORS x STUDIOS", "Cro", "Lehmann", "Billie Eilish", "Le Mile", "Numéro NL", "Glamour", "LEC", "OZMOZE", "DOJO", "Silkrock"];
+const services = ["Commercial", "Music video", "Fashion film", "Narrative"];
+const counts = services.map((s) => ({
+  label: s,
+  n: projects.filter((p) => p.category === s.split(" ")[0]).length,
+}));
+---
+
+<Base title="About — Luc Maibaum" path="/about">
+  <section class="shell page-head">
+    <p class="eyebrow">Director of Photography — Berlin</p>
+    <h1 class="display">About</h1>
+  </section>
+
+  <section class="shell intro">
+    <div class="text">
+      {bio.map((p) => <p>{p}</p>)}
+    </div>
+    <figure>
+      <img src="/img/luc-onset.jpg" alt="Luc Maibaum on set" loading="lazy" />
+      <figcaption class="eyebrow">On set</figcaption>
+    </figure>
+  </section>
+
+  <section class="shell lists">
+    <div>
+      <h2 class="eyebrow">Disciplines</h2>
+      <ul>
+        {counts.map((c) => (
+          <li><span>{c.label}</span><em>{String(c.n).padStart(2, "0")}</em></li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h2 class="eyebrow">Selected clients &amp; collaborators</h2>
+      <ul class="clients">
+        {clients.map((c) => <li><span>{c}</span></li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="shell cta-row">
+    <p>Got a project in mind?</p>
+    <a href="/contact">Get in touch →</a>
+  </section>
+</Base>
+
+<style>
+  .intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .intro { grid-template-columns: 1fr; }
+  }
+  .text p {
+    margin: 0 0 1.5rem;
+    font-size: clamp(1.0625rem, 1.5vw, 1.375rem);
+    line-height: 1.6;
+    color: rgba(244, 243, 241, 0.86);
+  }
+  .text p:first-child { color: var(--fg); font-size: clamp(1.25rem, 2vw, 1.75rem); letter-spacing: -0.015em; }
+  figure { margin: 0; }
+  figure img { width: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+  figcaption { margin-top: 0.75rem; }
+
+  .lists {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    margin-top: clamp(4rem, 9vw, 8rem);
+  }
+  @media (max-width: 860px) {
+    .lists { grid-template-columns: 1fr; }
+  }
+  .lists h2 { margin: 0 0 1.25rem; font-size: 0.6875rem; font-weight: 400; }
+  .lists ul { margin: 0; padding: 0; list-style: none; }
+  .lists li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 0;
+    border-top: 1px solid var(--line);
+    font-size: 1rem;
+  }
+  .lists em { font-style: normal; color: var(--muted); font-size: 0.8125rem; }
+  .clients { columns: 2; column-gap: 2.5rem; }
+  .clients li { break-inside: avoid; }
+
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: clamp(4rem, 9vw, 8rem);
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .cta-row p { margin: 0; font-size: clamp(1.5rem, 3.5vw, 2.75rem); letter-spacing: -0.03em; }
+  .cta-row a { font-size: 0.75rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); }
+  .cta-row a:hover { color: var(--fg); }
+</style>

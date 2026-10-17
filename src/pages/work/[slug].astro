@@ -1,0 +1,101 @@
+---
+import Base from "../../layouts/Base.astro";
+import VideoEmbed from "../../components/VideoEmbed.astro";
+import StillsSlideshow from "../../components/StillsSlideshow.astro";
+import projects from "../../projects.json";
+
+export function getStaticPaths() {
+  return projects.map((project, i) => ({
+    params: { slug: project.slug },
+    props: {
+      project,
+      prev: projects[(i - 1 + projects.length) % projects.length],
+      next: projects[(i + 1) % projects.length],
+    },
+  }));
+}
+
+const { project, prev, next } = Astro.props;
+---
+
+<Base title={`${project.title} — Luc Maibaum`} path="/work">
+  <article>
+    <div class="shell page-head head">
+      <p class="eyebrow">{project.category}</p>
+      <h1 class="display">{project.title}</h1>
+    </div>
+
+    <div class="stage">
+      <VideoEmbed
+        provider={project.video.provider}
+        id={project.video.id}
+        poster={project.stillFiles[0]}
+        label={project.title}
+      />
+    </div>
+
+    <StillsSlideshow stills={project.stillFiles} title={project.title} />
+
+    <div class="shell credits">
+      <div>
+        <span class="eyebrow">Cinematography</span>
+        <p>Luc Maibaum</p>
+      </div>
+      {project.director && (
+        <div>
+          <span class="eyebrow">Direction</span>
+          <p>{project.director}</p>
+        </div>
+      )}
+      {project.producer && (
+        <div>
+          <span class="eyebrow">Production</span>
+          <p>{project.producer}</p>
+        </div>
+      )}
+    </div>
+
+    <nav class="shell pager">
+      <a href={`/work/${prev.slug}`}>
+        <span class="eyebrow">Previous</span>
+        <p>{prev.title}</p>
+      </a>
+      <a href={`/work/${next.slug}`} class="right">
+        <span class="eyebrow">Next</span>
+        <p>{next.title}</p>
+      </a>
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .head { padding-bottom: clamp(1.75rem, 3vw, 2.75rem); }
+  .stage { width: 100%; max-width: var(--measure); margin-inline: auto; padding-inline: var(--gutter); }
+
+  .credits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: clamp(2.5rem, 5vw, 4rem);
+  }
+  .credits p { margin: 0.5rem 0 0; font-size: 1.0625rem; }
+
+
+  .pager {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: clamp(4rem, 8vw, 7rem);
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--line);
+  }
+  .pager p {
+    margin: 0.4rem 0 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .pager .right { text-align: right; }
+  .pager a { color: var(--muted); transition: color 0.25s; }
+  .pager a:hover { color: var(--fg); }
+</style>

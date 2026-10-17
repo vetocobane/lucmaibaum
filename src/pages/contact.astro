@@ -1,0 +1,65 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Contact — Luc Maibaum" path="/contact">
+  <section class="shell page-head">
+    <p class="eyebrow">Available for commissions worldwide</p>
+    <h1 class="display">Contact</h1>
+  </section>
+
+  <section class="shell columns">
+    <div class="details">
+      <div class="item">
+        <span class="eyebrow">Email</span>
+        <a class="big" href="mailto:maibaumfilm@gmail.com">maibaumfilm@gmail.com</a>
+      </div>
+      <div class="item">
+        <span class="eyebrow">Phone</span>
+        <a class="big" href="tel:+491735928302">+49 173 59 28 302</a>
+      </div>
+      <div class="item">
+        <span class="eyebrow">Based in</span>
+        <p class="big">Berlin, Germany</p>
+      </div>
+      <div class="item">
+        <span class="eyebrow">Elsewhere</span>
+        <p class="big links">
+          <a href="https://www.instagram.com/lucmaibaum/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://vimeo.com/lucmaibaum" target="_blank" rel="noopener">Vimeo</a>
+        </p>
+      </div>
+      <p class="fine">Legal details are on the <a href="/impressum">Impressum</a> page.</p>
+    </div>
+    <figure>
+      <img src="/img/luc-onset.jpg" alt="Luc Maibaum on set" loading="lazy" />
+    </figure>
+  </section>
+</Base>
+
+<style>
+  .columns {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .columns { grid-template-columns: 1fr; }
+  }
+  .item { padding: 1.5rem 0; border-top: 1px solid var(--line); }
+  .item:first-child { border-top: 0; padding-top: 0; }
+  .big {
+    display: block;
+    margin: 0.4rem 0 0;
+    font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+    letter-spacing: -0.01em;
+  }
+  .links { display: flex; gap: 1.5rem; }
+  .links a { transition: color 0.25s; }
+  .links a:hover { color: var(--muted); }
+  .fine { margin-top: 2.5rem; font-size: 0.8125rem; color: var(--muted); }
+  .fine a { text-decoration: underline; text-underline-offset: 3px; }
+  figure { margin: 0; }
+  figure img { width: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+</style>

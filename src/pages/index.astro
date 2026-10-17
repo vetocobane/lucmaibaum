@@ -1,0 +1,109 @@
+---
+import Base from "../layouts/Base.astro";
+import WorkGrid from "../components/WorkGrid.astro";
+import projects from "../projects.json";
+
+const featured = ["tinder", "billie-eilish-a-colors-close-up", "le-mile-the-trigger", "spacies-x-cro", "the-one-after-me", "lehmann"]
+  .map((slug) => projects.find((p) => p.slug === slug))
+  .filter(Boolean);
+const showreel = "1022094530";
+---
+
+<Base title="Luc Maibaum — Director of Photography" path="/">
+  <section class="hero">
+    <div class="reel">
+      <iframe
+        src={`https://player.vimeo.com/video/${showreel}?background=1&autoplay=1&loop=1&muted=1&dnt=1`}
+        title="Showreel 2025"
+        allow="autoplay; fullscreen"
+        loading="eager"
+      ></iframe>
+    </div>
+    <div class="scrim"></div>
+    <div class="shell hero-copy">
+      <p class="eyebrow">Director of Photography — Berlin</p>
+      <h1>Luc<br />Maibaum</h1>
+      <p class="lede">Commercial, music, fashion and narrative work for brands, labels and independent film.</p>
+      <a class="cta" href="/work">Selected work</a>
+    </div>
+  </section>
+
+  <section class="shell block">
+    <div class="block-head">
+      <p class="eyebrow">Selected work</p>
+      <a class="all" href="/work">All projects →</a>
+    </div>
+    <WorkGrid projects={featured} />
+  </section>
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: clamp(3rem, 8vh, 6rem);
+    overflow: hidden;
+  }
+  .reel {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .reel iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 56.25vw;
+    min-height: 100svh;
+    min-width: 177.78svh;
+    transform: translate(-50%, -50%);
+    border: 0;
+  }
+  .scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 11, 12, 0.55) 0%, rgba(11, 11, 12, 0.1) 40%, rgba(11, 11, 12, 0.92) 100%);
+  }
+  .hero-copy { position: relative; }
+  .hero-copy h1 {
+    margin: 0.75rem 0 0;
+    font-size: clamp(3.5rem, 13vw, 12rem);
+    font-weight: 600;
+    line-height: 0.86;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+  }
+  .lede {
+    max-width: 34ch;
+    margin: 1.75rem 0 0;
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    color: rgba(244, 243, 241, 0.78);
+  }
+  .cta {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.85rem 1.6rem;
+    border: 1px solid var(--line);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .cta:hover { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+
+  .block { padding-top: clamp(5rem, 10vw, 9rem); }
+  .block-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+    border-bottom: 1px solid var(--line);
+  }
+  .all { font-size: 0.75rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+  .all:hover { color: var(--fg); }
+</style>

@@ -1,0 +1,61 @@
+---
+const { projects } = Astro.props;
+---
+
+<div class="grid">
+  {projects.map((p) => (
+    <a class="tile" href={`/work/${p.slug}`} data-category={p.category}>
+      <div class="frame">
+        <img src={p.stillFiles[0]} alt={p.title} loading="lazy" />
+      </div>
+      <div class="meta">
+        <h3>{p.title}</h3>
+        <span>{p.category}</span>
+      </div>
+    </a>
+  ))}
+</div>
+
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 460px), 1fr));
+    gap: clamp(1.5rem, 3vw, 3rem) clamp(1.5rem, 2.5vw, 2.5rem);
+  }
+  .tile { display: block; }
+  .frame {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--bg-soft);
+  }
+  .frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9);
+    transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), filter 0.5s;
+  }
+  .tile:hover .frame img { transform: scale(1.04); filter: saturate(1.05); }
+  .meta {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 0.9rem;
+  }
+  .meta h3 {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+  .meta span {
+    font-size: 0.6875rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .tile[hidden] { display: none; }
+</style>
